@@ -26,9 +26,8 @@ public class Screen4 extends AppCompatActivity {
 
         // Crear una lista de datos
         List<String> listaDatos = new ArrayList<>();
-        listaDatos.add("Opción 1");
-        listaDatos.add("Opción 2");
-        listaDatos.add("Opción 3");
+        listaDatos.add("Usuario: "+getIntent().getStringExtra("Usuario"));
+
 
         // Crear un ArrayAdapter y establecerlo en el Spinner
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, listaDatos);
