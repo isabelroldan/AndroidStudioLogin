@@ -1,0 +1,4 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#02AF7B" />
+    <corners android:radius="0dp" /> <!-- Esto hace que los bordes sean cuadrados -->
+</shape>
