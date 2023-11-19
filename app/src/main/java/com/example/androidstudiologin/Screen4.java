@@ -26,7 +26,7 @@ public class Screen4 extends AppCompatActivity {
 
         // Crear una lista de datos
         List<String> listaDatos = new ArrayList<>();
-        listaDatos.add("Usuario: "+getIntent().getStringExtra("Usuario"));
+        listaDatos.add("Usuario: "+getIntent().getStringExtra("usuario"));
 
 
         // Crear un ArrayAdapter y establecerlo en el Spinner
@@ -38,9 +38,8 @@ public class Screen4 extends AppCompatActivity {
         mySpinner.setAdapter(adapter);
     }
 
-    public void logout(View view){
-        //Intent i = new Intent(this, Screen1.class);
-
-        //startActivity(i);
+    public void Logout(View view){
+        Intent i = new Intent(this, Screen1.class);
+        startActivity(i);
     }
 }
