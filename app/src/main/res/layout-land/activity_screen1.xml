@@ -8,11 +8,13 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="229dp"
-        android:layout_height="176dp"
-        android:layout_marginTop="76dp"
-        android:layout_marginEnd="88dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="199dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="116dp"
+        android:layout_marginEnd="60dp"
+        app:layout_constraintEnd_toStartOf="@+id/usuario"
+        app:layout_constraintHorizontal_bias="0.822"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
 
@@ -20,58 +22,62 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="80dp"
-        android:text="Welcome to MediTrack"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="48dp"
+        android:text="@string/bienvenido"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/loginButton"
+        app:layout_constraintHorizontal_bias="0.64"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.03" />
 
     <EditText
         android:id="@+id/usuario"
-        android:layout_width="374dp"
-        android:layout_height="67dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="52dp"
+        android:layout_width="403dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="32dp"
         android:ems="10"
-        android:hint="Usuario"
+        android:hint="@string/usuario"
         android:inputType="text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/contraseña"
-        android:layout_width="373dp"
-        android:layout_height="71dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="403dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
         android:ems="10"
-        android:hint="Contraseña"
+        android:hint="@string/contraseña"
         android:inputType="textPassword"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/usuario" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="223dp"
+        android:layout_height="53dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:onClick="forgotPassword"
-        android:text="Forgot your password?"
+        android:text="@string/contraseñaOlvidada"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/contraseña" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="158dp"
-        android:layout_height="26dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="124dp"
+        android:layout_width="304dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="60dp"
         android:onClick="newUser"
-        android:text="New user? Sign up now"
+        android:text="@string/nuevoUsuario"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginButton" />
@@ -80,12 +86,26 @@
         android:id="@+id/loginButton"
         android:layout_width="360dp"
         android:layout_height="54dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="8dp"
         android:backgroundTint="#02AF7B"
         android:onClick="LogIn"
-        android:text="Log in"
+        android:text="@string/entrar"
         app:cornerRadius="0dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.905"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <ToggleButton
+        android:id="@+id/toggleIdioma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        android:text="ToggleButton"
+        android:textOn="Español"
+        android:textOff="English"
+        android:checked="false"
+        app:layout_constraintBottom_toTopOf="@+id/usuario"
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
