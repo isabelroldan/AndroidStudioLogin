@@ -16,8 +16,11 @@
             android:name=".Screen1"
             android:exported="true" />
         <activity
-            android:name=".Screen4s"
-            android:exported="false" />
+            android:name=".Screen2"
+            android:exported="true" />
+        <activity
+            android:name=".Screen3"
+            android:exported="true" />
         <activity
             android:name=".Screen4"
             android:exported="true" />
