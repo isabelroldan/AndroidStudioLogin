@@ -52,7 +52,7 @@ public class Screen3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Iniciar la nueva Activity aquí
-                Intent intent = new Intent(Screen3.this, Screen1.class); // Reemplaza OtraActivity con el nombre de tu siguiente actividad
+                Intent intent = new Intent(Screen3.this, Screen1.class);
                 startActivity(intent);
             }
         });
