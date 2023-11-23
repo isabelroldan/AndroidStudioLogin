@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AndroidStudioLogin</string>
+    <string name="bienvenido">Bienvenido a MediTrack</string>
+    <string name="usuario">Usuario</string>
+    <string name="contraseña">Contraseña</string>
+    <string name="entrar">Entrar</string>
+    <string name="contraseñaOlvidada">¿Has olvidado tu contraseña?</string>
+    <string name="nuevoUsuario">¿Eres nuevo usuario? Suscríbete ahora</string>
+    <string name="salir">Salir</string>
+
+
+</resources>
