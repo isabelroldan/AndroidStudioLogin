@@ -6,6 +6,7 @@
     android:background="@drawable/cp2"
     android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Screen2"
     >
 
     <LinearLayout
@@ -95,7 +96,7 @@
             android:text="@string/save"
             android:textColorHighlight="#88CC7E"
             android:textColorLink="#88cc7e"
-            android:textSize="24sp" />
+            android:textSize="20sp" />
 
 
     </LinearLayout>
