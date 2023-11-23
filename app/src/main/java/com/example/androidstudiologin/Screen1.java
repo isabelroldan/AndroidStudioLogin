@@ -1,6 +1,7 @@
 package com.example.androidstudiologin;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,6 +13,7 @@ import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
@@ -27,6 +29,8 @@ public class Screen1 extends AppCompatActivity {
 
     /*private SharedPreferences sharedPreferences;*/
     private SharedPreferences sharedPreferences;
+
+    private Switch switchTheme;
 
 
 
@@ -59,6 +63,24 @@ public class Screen1 extends AppCompatActivity {
                 cambiarIdioma("en");
             }
         });
+
+        switchTheme = findViewById(R.id.switch1);
+        switchTheme.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked) {
+                // Cambiar a tema oscuro
+                setDarkTheme();
+            } else {
+                // Cambiar a tema claro
+                setLightTheme();
+            }
+        });
+
+        // Aplicar el tema inicial
+        if (switchTheme.isChecked()) {
+            setDarkTheme();
+        } else {
+            setLightTheme();
+        }
     }
 
 
@@ -124,6 +146,60 @@ public class Screen1 extends AppCompatActivity {
         config.setLocale(locale);
         super.attachBaseContext(newBase.createConfigurationContext(config));
     }*/
+
+    private void setDarkTheme() {
+        // Cambiar el fondo a negro y el texto a blanco
+        getWindow().getDecorView().setBackgroundColor(ContextCompat.getColor(this, R.color.black));
+
+        // Cambiar el color del texto según el estado del interruptor
+        int textColor = ContextCompat.getColor(this, R.color.white);
+
+        // Actualizar cada vista que pueda cambiar con el cambio de tema
+        TextView textViewBienvenido = findViewById(R.id.textView);
+        textViewBienvenido.setTextColor(textColor);
+
+        EditText editTextUsuario = findViewById(R.id.usuario);
+        editTextUsuario.setHintTextColor(textColor);
+
+        EditText editTextContraseña = findViewById(R.id.contraseña);
+        editTextContraseña.setHintTextColor(textColor);
+
+        Button loginButton = findViewById(R.id.loginButton);
+        loginButton.setTextColor(textColor);
+
+        TextView textViewContraseñaOlvidada = findViewById(R.id.textView2);
+        textViewContraseñaOlvidada.setTextColor(textColor);
+
+        TextView textViewNuevoUsuario = findViewById(R.id.textView3);
+        textViewNuevoUsuario.setTextColor(textColor);
+    }
+
+    private void setLightTheme() {
+        // Cambiar el fondo a blanco y el texto a negro
+        getWindow().getDecorView().setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+
+        // Cambiar el color del texto según el estado del interruptor
+        int textColor = ContextCompat.getColor(this, R.color.black);
+
+        // Actualizar cada vista que pueda cambiar con el cambio de tema
+        TextView textViewBienvenido = findViewById(R.id.textView);
+        textViewBienvenido.setTextColor(textColor);
+
+        EditText editTextUsuario = findViewById(R.id.usuario);
+        editTextUsuario.setHintTextColor(textColor);
+
+        EditText editTextContraseña = findViewById(R.id.contraseña);
+        editTextContraseña.setHintTextColor(textColor);
+
+        Button loginButton = findViewById(R.id.loginButton);
+        loginButton.setTextColor(textColor);
+
+        TextView textViewContraseñaOlvidada = findViewById(R.id.textView2);
+        textViewContraseñaOlvidada.setTextColor(textColor);
+
+        TextView textViewNuevoUsuario = findViewById(R.id.textView3);
+        textViewNuevoUsuario.setTextColor(textColor);
+    }
 
     public void LogIn(View view){
 
