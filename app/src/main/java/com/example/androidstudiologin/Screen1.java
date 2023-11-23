@@ -42,17 +42,6 @@ public class Screen1 extends AppCompatActivity {
         metName = (EditText) findViewById(R.id.usuario);
         metPassword = (EditText) findViewById(R.id.contraseña);
 
-        /*sharedPreferences =  PreferenceManager.getDefaultSharedPreferences(this);
-
-        ToggleButton toggleIdioma = findViewById(R.id.toggleIdioma);
-        toggleIdioma.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if (isChecked) {
-                cambiarIdioma("es");
-            } else {
-                cambiarIdioma("en");
-            }
-        });*/
-
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 
         ToggleButton toggleIdioma = findViewById(R.id.toggleIdioma);
@@ -101,7 +90,7 @@ public class Screen1 extends AppCompatActivity {
         // Actualizar la configuración de recursos
         getResources().updateConfiguration(config, getResources().getDisplayMetrics());
 
-        // Actualizar las vistas manualmente (puedes poner todas las actualizaciones necesarias aquí)
+        // Actualizar las vistas manualmente
         actualizarVistas();
     }
 
@@ -116,7 +105,6 @@ public class Screen1 extends AppCompatActivity {
         EditText editTextContraseña = findViewById(R.id.contraseña);
         editTextContraseña.setHint(R.string.contraseña);
 
-        // Añade las siguientes líneas para los elementos adicionales
         Button loginButton = findViewById(R.id.loginButton);
         loginButton.setText(R.string.entrar);
 
@@ -126,26 +114,6 @@ public class Screen1 extends AppCompatActivity {
         TextView textViewNuevoUsuario = findViewById(R.id.textView3);
         textViewNuevoUsuario.setText(R.string.nuevoUsuario);
     }
-    /*private void cambiarIdioma(String idioma) {
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("idioma", idioma);
-        editor.apply();
-
-        Intent intent = getIntent();
-        finish();
-        startActivity(intent);
-    }*/
-
-    /*@Override
-    protected void attachBaseContext(Context newBase) {
-        // Cambiar el contexto de la aplicación para reflejar el nuevo idioma
-        String idioma = sharedPreferences.getString("idioma", "en");
-        Locale locale = new Locale(idioma);
-        Configuration config = new Configuration(newBase.getResources().getConfiguration());
-        Locale.setDefault(locale);
-        config.setLocale(locale);
-        super.attachBaseContext(newBase.createConfigurationContext(config));
-    }*/
 
     private void setDarkTheme() {
         // Cambiar el fondo a negro y el texto a blanco
@@ -242,7 +210,7 @@ public class Screen1 extends AppCompatActivity {
 
     }
 
-    /*public void newUser(View view){
+    public void newUser(View view){
         Intent i = new Intent(this, Screen2.class);
         startActivity(i);
     }
@@ -250,5 +218,5 @@ public class Screen1 extends AppCompatActivity {
     public void forgotPassword(View view){
         Intent i = new Intent(this, Screen3.class);
         startActivity(i);
-    }*/
+    }
 }
