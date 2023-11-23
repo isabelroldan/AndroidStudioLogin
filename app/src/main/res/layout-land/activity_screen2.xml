@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     android:background="@android:drawable/alert_light_frame"
     android:orientation="vertical"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".Screen2"
+
     >
 
     <TextView
