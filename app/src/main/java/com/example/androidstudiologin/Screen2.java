@@ -16,8 +16,8 @@ import android.util.Patterns;
 public class Screen2 extends AppCompatActivity {
     private boolean isLightTheme = true;
 
-    private EditText emailEditText, userEditText, passwordEditText, nameEditText;
-    private Button entrarButton, themeButton;
+    private EditText emailEditText, userEditText, passwordEditText;
+    private Button entrarButton;
     private boolean isEnglish = false;
 
     @SuppressLint("MissingInflatedId")
@@ -49,22 +49,35 @@ public class Screen2 extends AppCompatActivity {
         String user = userEditText.getText().toString().trim();
         String password = passwordEditText.getText().toString().trim();
 
-        if (!isValidEmail(email)) {
+        if (TextUtils.isEmpty(email)) {
+            emailEditText.setError("Ingrese su correo electrónico");
+            isValid = false;
+            Toast.makeText(Screen2.this, "Ingrese su correo electrónico", Toast.LENGTH_SHORT).show();
+        } else if (!isValidEmail(email)) {
             emailEditText.setError("Ingrese un correo electrónico válido");
             isValid = false;
             Toast.makeText(Screen2.this, "Ingrese un correo electrónico válido", Toast.LENGTH_SHORT).show();
         }
 
-        if (password.length() < 6) {
+        if (TextUtils.isEmpty(user)) {
+            userEditText.setError("Ingrese su usuario");
+            isValid = false;
+            Toast.makeText(Screen2.this, "Ingrese su usuario", Toast.LENGTH_SHORT).show();
+        }
+
+        if (TextUtils.isEmpty(password)) {
+            passwordEditText.setError("Ingrese su contraseña");
+            isValid = false;
+            Toast.makeText(Screen2.this, "Ingrese su contraseña", Toast.LENGTH_SHORT).show();
+        } else if (password.length() < 6) {
             passwordEditText.setError("La contraseña debe tener al menos 6 caracteres");
             isValid = false;
             Toast.makeText(Screen2.this, "La contraseña debe tener al menos 6 caracteres", Toast.LENGTH_SHORT).show();
         }
 
-
-
         return isValid;
     }
+
 
     private boolean isValidEmail(CharSequence target) {
         return (!TextUtils.isEmpty(target) && Patterns.EMAIL_ADDRESS.matcher(target).matches());
