@@ -1,5 +1,17 @@
 <resources>
     <string name="app_name">AndroidStudioLogin</string>
+    <string name="change_language">Cambiar Idioma</string>
+    <string name="registration">Registro</string>
+    <string name="email">Correo electrónico</string>
+    <string name="user">Usuario</string>
+    <string name="name">Nombre</string>
+    <string name="password">Contraseña</string>
+    <string name="save">Guardar</string>
+    <string name="change_theme">Cambiar Tema</string>
+    <string name="forgot_password">¿Olvidaste tu contraseña?</string>
+    <string name="retrieve_account">Ingresa tu correo electrónico abajo para recuperar tu cuenta</string>
+    <string name="email_hint">Correo electrónico</string>
+    <string name="send">Enviar</string>
     <string name="bienvenido">Bienvenido a MediTrack</string>
     <string name="usuario">Usuario</string>
     <string name="contraseña">Contraseña</string>

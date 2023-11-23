@@ -1,0 +1,4 @@
+<style android:name="ButtonWhiteBackground"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:name="android:background">#FFFFFF</item>
+</style>

@@ -1,0 +1,7 @@
+
+i	java:S101
+"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Öïœ»8©‡·Ž¿1
+o
+java:S1450"RRemove the "emf" field and declare it as a local variable in the relevant methods.(™àŽö8·‡·Ž¿1
+U	java:S106%"9Replace this use of System.out or System.err by a logger.(…÷ÐÛ8¾‡·Ž¿1
+Z	java:S106'"9Replace this use of System.out or System.err by a logger.(³…ìÕýÿÿÿÿ8¾‡·Ž¿1
